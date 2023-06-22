@@ -1,0 +1,30 @@
+.img-background {
+    z-index: -1;
+}
+
+.contenedor-principal {
+    position: relative;
+}
+
+.card-principal {
+    left: 10rem;
+    top: -26rem;
+    border-radius: 1rem;
+}
+
+.botones {
+    margin-right: 5rem;
+}
+.boton-eliminar, .boton-agregar, .boton-editar {
+    filter: drop-shadow(2px 2px 2px #808080);
+    width: 3rem;
+}
+
+.boton-agregar:hover, .boton-editar:hover, .boton-eliminar:hover {
+    filter: drop-shadow(0 0 1px #0094ff);
+}
+
+.img-check-ex {
+    width: 1.8rem;
+    height: auto;
+}

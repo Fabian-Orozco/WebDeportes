@@ -1,0 +1,14 @@
+﻿@{ ViewBag.Title = "Eliminar deporte";}
+
+@*Mensaje de éxito. Retroalimentación para el usuario sobre la acción de eliminado*@
+@if (ViewBag.Message != null) {
+	if (ViewBag.ExitoAlEliminar == true) {
+		<div class="alert alert-success mt-2 text-center">  <h3>@ViewBag.Message</h3> </div>
+	}
+	else {
+		<div class="alert alert-danger mt-2 text-center"> <h3>@ViewBag.Message</h3> </div>
+	}
+	<a href="@Url.Action("Index", "Deporte")">
+		<div class="btn btn-primary">Volver al inicio</div>
+	</a>
+}

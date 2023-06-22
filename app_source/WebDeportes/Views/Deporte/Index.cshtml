@@ -1,0 +1,77 @@
+﻿@model List<DeporteModel>;
+
+@{ ViewData["Title"] = "Home Page"; }
+
+@*Contenido principal*@
+<section class="container-fluid justify-content-center contenedor-principal align-items-center p-0 m-0">
+    <img class="img-fluid rounded-bottom" src="~/img/sportWallpaper.jpg" alt="Deportistas" />
+    <div class="card text-center card-principal w-75 shadow-sm">
+        <div class="card-body">
+            <h3 class="card-title text-primary pb-2">Lista de deportes</h3>
+            <div class="table-responsive">
+                @*Tabla con los datos de los deportes*@
+                <table class="table table-hover">
+                    @*Encabezado de tabla*@
+                    <thead class="table-dark">
+                        <tr class="align-middle">
+                        <th scope="col">Nombre</th>
+                        <th scope="col">País de origen</th>
+                        <th scope="col">Cantidad de jugadores por equipo</th>
+                        <th scope="col">Característica principal</th>
+                        <th scope="col">Es un deporte olímpico</th>
+                        <th colspan="2">Accion</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        @*En caso de que la lista esté vacía*@
+                        @if (Model.Count == 0) {
+                            <td colspan="7" class="align-middle">No hay deportes existentes, ¡Agrega el primero!</td>
+                        } else {
+                        @*Cuerpo de tabla*@
+                            @foreach(var deporte in Model) {
+                                <tr>
+                                    <th class="align-middle" scope="row">@deporte.Nombre</th>
+                                    <td class="align-middle">@deporte.PaisOrigen</td>
+                                    <td class="align-middle">@deporte.JugadoresPorEquipo</td>
+                                    <td class="align-middle">@deporte.CaracteristicaPrincipal</td>
+                                    @*Indica con un símbolo si es olímpico o no*@
+                                    @if (deporte.EsOlimpico) {
+                                        <td class="align-middle">
+                                        <img class="img-fluid img-check-ex" src="~/img/check-icon.svg" alt="Check icon" />
+                                        </td>
+                                    } else {
+                                        <td class="align-middle">
+                                        <img class="img-fluid img-check-ex" src="~/img/ex-icon.svg" alt="Check icon" />
+                                        </td>
+                                    }
+                                
+                                    @*Botón de editar*@
+                                    <td class="align-middle">
+                                        <a href="@Url.Action("ActualizarDeporte", "Deporte", new {ID = deporte.ID})" onclick=" return confirm('¿Seguro que desea editar este deporte?')">
+                                            <img class="boton-editar" title="Actualizar deporte" src="~/img/edit-icon.svg" alt="Botón de actualizar" />
+                                        </a>
+                                    </td>
+                                    @*Botón de eliminar*@
+                                    <td class="align-middle">
+                                        <a href="@Url.Action("EliminarDeporte", "Deporte",new {ID = deporte.ID})" onclick=" return confirm('¿Seguro que desea eliminar este deporte?')">
+                                            <img class="boton-eliminar m-1" title="Eliminar deporte" src="~/img/delete-icon.svg" alt="Botón de eliminar" />
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+
+@*Botón de agregar*@
+<aside>
+    <div class="botones d-flex flex-column position-fixed top-50 end-0 translate-middle-y">
+        <a href="@Url.Action("AgregarDeporte", "Deporte")">
+                <img class="boton-agregar m-2" title="Agregar un deporte" src="~/img/add-icon.svg" alt="Botón de agregar" />
+        </a>
+    </div>
+</aside>

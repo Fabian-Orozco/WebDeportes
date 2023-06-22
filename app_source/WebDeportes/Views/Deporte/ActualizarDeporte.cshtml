@@ -1,0 +1,68 @@
+﻿@model DeporteModel
+@{ ViewBag.Title = "Actualizar deporte"; 
+	
+}
+
+@*Mensaje de éxito. Retroalimentación para el usuario sobre la acción de actualizado*@
+@if (ViewBag.Message != null) {
+	if (ViewBag.ExitoAlActualizar == true) {
+		<div class="alert alert-success mt-2 text-center">  <h3>@ViewBag.Message</h3> </div>
+	}
+	else {
+		<div class="alert alert-danger mt-2 text-center"> <h3>@ViewBag.Message</h3> </div>
+	}
+	<a href="@Url.Action("Index", "Deporte")">
+		<div class="btn btn-primary">Volver al inicio</div>
+	</a>
+}
+
+<html>
+	<head>
+		<title>@ViewBag.Title</title>
+	</head>
+	<body>
+		@*Formulario*@
+		@using (Html.BeginForm("ActualizarDeporte","Deporte", FormMethod.Post, new {enctype = "multipart/form-data"})) {
+			@Html.AntiForgeryToken()
+			<h3 class="text-primary mt-3">Datos del deporte</h3>
+			<div class="row">
+
+				@*Entrada de datos para el nombre*@
+				<div class="col pb-2">
+				@Html.LabelFor(model => model.Nombre, new {@class = "form-label"})
+					@Html.TextBoxFor(model => model.Nombre, new {@class = "form-control"})
+					@Html.ValidationMessageFor(model => model.Nombre, "", new {@class = "text-danger"})
+				</div>
+
+				@*Entrada de datos para el país de origen*@
+				<div class="col pb-2">
+				@Html.LabelFor(model => model.PaisOrigen, new {@class = "form-label"})
+					@Html.TextBoxFor(model => model.PaisOrigen, new {@class = "form-control"})
+					@Html.ValidationMessageFor(model => model.PaisOrigen, "", new {@class = "text-danger"})
+				</div>
+			</div>
+
+			<div class="row d-flex align-items-center">
+				@*Entrada de datos para la característica principal*@
+				<div class="col pb-2">
+					@Html.LabelFor(model => model.CaracteristicaPrincipal, new {@class = "form-label"})
+					@Html.TextAreaFor(model => model.CaracteristicaPrincipal, new {@class = "form-control"})
+					@Html.ValidationMessageFor(model => model.CaracteristicaPrincipal, "", new {@class = "text-danger"})
+				</div>
+				<div class="col d-flex flex-md-column">
+					@*Entrada de datos para la cantidad de jugadores por equipo*@
+					@Html.LabelFor(model => model.JugadoresPorEquipo, new {@class = "form-label"})
+					@Html.TextBoxFor(model => model.JugadoresPorEquipo, new { type = "number", min = "0", step = "1" })
+					@Html.ValidationMessageFor(model => model.JugadoresPorEquipo, "", new {@class = "text-danger"})
+				@*Entrada de datos para indicar si es olímpico o no*@
+					<div class="form-group">
+						@Html.CheckBoxFor(model => model.EsOlimpico, new {@class = "form-check-input"})
+						@Html.LabelFor(model => model.EsOlimpico, new {@class = "form-label"})
+						@Html.ValidationMessageFor(model => model.EsOlimpico, "", new {@class = "text-danger"})
+					</div>
+				</div>
+			</div>
+			<input type="submit" class="btn btn-success" value="Actualizar"/> 
+		}
+	</body>
+</html>
