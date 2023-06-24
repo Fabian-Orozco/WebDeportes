@@ -1,0 +1,12 @@
+{
+  "ServerUri": "http://localhost:9000/",
+  "Organization": null,
+  "ProjectKey": "WebDeportes",
+  "ProjectName": "WebDeportes",
+  "Profiles": {
+    "Secrets": {
+      "ProfileKey": "AYjg7xVWF7fHYyycBzcZ",
+      "ProfileTimestamp": "2023-06-22T02:29:04Z"
+    }
+  }
+}
