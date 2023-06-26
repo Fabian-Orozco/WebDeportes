@@ -87,5 +87,6 @@ D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\app_source\WebDeportes\w
 D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\app_source\WebDeportes\wwwroot\lib\jquery\LICENSE.txt
 D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\app_source\WebDeportes\appsettings.json
 D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\app_source\WebDeportes\Views\Shared\_Layout.cshtml.css
+D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\app_source\WebDeportes\coverage.xml
 D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\app_source\WebDeportes\Script-BD.sql
 D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\app_source\WebDeportes\Properties\launchSettings.json

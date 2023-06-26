@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AnalysisConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
-  <SonarConfigDir>D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\app_source\WebDeportes\.sonarqube\conf</SonarConfigDir>
-  <SonarOutputDir>D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\app_source\WebDeportes\.sonarqube\out</SonarOutputDir>
-  <SonarBinDir>D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\app_source\WebDeportes\.sonarqube\bin</SonarBinDir>
-  <SonarScannerWorkingDirectory>D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\app_source\WebDeportes</SonarScannerWorkingDirectory>
+  <SonarConfigDir>D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\unit_test\.sonarqube\conf</SonarConfigDir>
+  <SonarOutputDir>D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\unit_test\.sonarqube\out</SonarOutputDir>
+  <SonarBinDir>D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\unit_test\.sonarqube\bin</SonarBinDir>
+  <SonarScannerWorkingDirectory>D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\unit_test</SonarScannerWorkingDirectory>
   <HasBeginStepCommandLineCredentials>true</HasBeginStepCommandLineCredentials>
   <SonarQubeHostUrl>http://localhost:9000</SonarQubeHostUrl>
   <SonarQubeVersion>10.1.0.73491</SonarQubeVersion>
@@ -13,7 +13,7 @@
     <ConfigSetting Id="TfsUri" />
     <ConfigSetting Id="VsCoverageConverterToolPath" />
     <ConfigSetting Id="UnchangedFilesPath" />
-    <ConfigSetting Id="sonar.pullrequest.cache.basepath" Value="D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\app_source\WebDeportes" />
+    <ConfigSetting Id="sonar.pullrequest.cache.basepath" Value="D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\unit_test" />
     <ConfigSetting Id="settings.file.path" Value="C:\Users\Fabian\.dotnet\tools\.store\dotnet-sonarscanner\5.13.0\dotnet-sonarscanner\5.13.0\tools\net5.0\any\SonarQube.Analysis.xml" />
   </AdditionalConfig>
   <ServerSettings>
@@ -122,14 +122,14 @@
     <Property Name="sonar.core.startTime">25/6/2023 19:18:35</Property>
   </ServerSettings>
   <LocalSettings>
-    <Property Name="sonar.cs.vscoveragexml.reportsPaths">.\sonarqubecoverage\SonarQube.xml</Property>
+    <Property Name="sonar.cs.vscoveragexml.reportsPaths">coverage.xml</Property>
     <Property Name="sonar.host.url">http://localhost:9000</Property>
   </LocalSettings>
   <AnalyzersSettings>
     <AnalyzerSettings>
       <Language>cs</Language>
-      <RulesetPath>D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\app_source\WebDeportes\.sonarqube\conf\Sonar-cs.ruleset</RulesetPath>
-      <DeactivatedRulesetPath>D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\app_source\WebDeportes\.sonarqube\conf\Sonar-cs-none.ruleset</DeactivatedRulesetPath>
+      <RulesetPath>D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\unit_test\.sonarqube\conf\Sonar-cs.ruleset</RulesetPath>
+      <DeactivatedRulesetPath>D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\unit_test\.sonarqube\conf\Sonar-cs-none.ruleset</DeactivatedRulesetPath>
       <AnalyzerPlugins>
         <AnalyzerPlugin Key="csharp" Version="9.3.0.71466" StaticResourceName="SonarAnalyzer-9.3.0.71466.zip">
           <AssemblyPaths>
@@ -151,13 +151,13 @@
         </AnalyzerPlugin>
       </AnalyzerPlugins>
       <AdditionalFilePaths>
-        <Path>D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\app_source\WebDeportes\.sonarqube\conf\cs\SonarLint.xml</Path>
+        <Path>D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\unit_test\.sonarqube\conf\cs\SonarLint.xml</Path>
       </AdditionalFilePaths>
     </AnalyzerSettings>
     <AnalyzerSettings>
       <Language>vbnet</Language>
-      <RulesetPath>D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\app_source\WebDeportes\.sonarqube\conf\Sonar-vbnet.ruleset</RulesetPath>
-      <DeactivatedRulesetPath>D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\app_source\WebDeportes\.sonarqube\conf\Sonar-vbnet-none.ruleset</DeactivatedRulesetPath>
+      <RulesetPath>D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\unit_test\.sonarqube\conf\Sonar-vbnet.ruleset</RulesetPath>
+      <DeactivatedRulesetPath>D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\unit_test\.sonarqube\conf\Sonar-vbnet-none.ruleset</DeactivatedRulesetPath>
       <AnalyzerPlugins>
         <AnalyzerPlugin Key="csharp" Version="9.3.0.71466" StaticResourceName="SonarAnalyzer-9.3.0.71466.zip">
           <AssemblyPaths>
@@ -179,7 +179,7 @@
         </AnalyzerPlugin>
       </AnalyzerPlugins>
       <AdditionalFilePaths>
-        <Path>D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\app_source\WebDeportes\.sonarqube\conf\vbnet\SonarLint.xml</Path>
+        <Path>D:\Desktop\CI0126_22b_labs_fabian-orozco-main\II-Examen\unit_test\.sonarqube\conf\vbnet\SonarLint.xml</Path>
       </AdditionalFilePaths>
     </AnalyzerSettings>
   </AnalyzersSettings>

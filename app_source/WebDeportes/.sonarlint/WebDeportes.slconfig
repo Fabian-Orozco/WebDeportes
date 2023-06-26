@@ -4,6 +4,22 @@
   "ProjectKey": "WebDeportes",
   "ProjectName": "WebDeportes",
   "Profiles": {
+    "CSharp": {
+      "ProfileKey": "AYjg7xcsF7fHYyycBzoJ",
+      "ProfileTimestamp": "2023-06-22T02:29:05Z"
+    },
+    "Js": {
+      "ProfileKey": "AYjg7xPnF7fHYyycBzPA",
+      "ProfileTimestamp": "2023-06-22T02:29:04Z"
+    },
+    "Ts": {
+      "ProfileKey": "AYjg7x4rF7fHYyycB0ju",
+      "ProfileTimestamp": "2023-06-22T02:29:07Z"
+    },
+    "Css": {
+      "ProfileKey": "AYjg7xFiF7fHYyycBy-t",
+      "ProfileTimestamp": "2023-06-22T02:29:03Z"
+    },
     "Secrets": {
       "ProfileKey": "AYjg7xVWF7fHYyycBzcZ",
       "ProfileTimestamp": "2023-06-22T02:29:04Z"

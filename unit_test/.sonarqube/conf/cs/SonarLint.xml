@@ -3,7 +3,7 @@
   <Settings>
     <Setting>
       <Key>sonar.cs.vscoveragexml.reportsPaths</Key>
-      <Value>.\sonarqubecoverage\SonarQube.xml</Value>
+      <Value>coverage.xml</Value>
     </Setting>
     <Setting>
       <Key>sonar.cs.ignoreHeaderComments</Key>
